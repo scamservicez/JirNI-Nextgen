@@ -1,18 +1,18 @@
-# JavaExternal — внешний доступ к JVM без JNI
+# JirNI-nextgen — внешний доступ к JVM без JNI
 
 [![JDK](https://img.shields.io/badge/JDK-22%2B-orange?logo=openjdk)](https://openjdk.org/projects/jdk/25/)
 [![FFM](https://img.shields.io/badge/Foreign%20Function%20%26%20Memory-JEP%20454-blue)](https://openjdk.org/jeps/454)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey?logo=windows)]()
 [![Build](https://img.shields.io/badge/build-Maven-C71A36?logo=apache-maven)]()
 
-> Полная переноска C++ библиотеки **`JavaExternal`** на Java 22+ с использованием
+> Полная переноска C++ библиотеки **`JirNI-nextgen`** на Java 22+ с использованием
 > Foreign Function & Memory API. Цель — **побайтовая совместимость поведения с оригиналом**.
 
 ---
 
 ## ✨ Что это такое
 
-`JavaExternal` позволяет **читать и изменять объекты внутри чужой JVM из соседнего процесса** —
+`JirNI-nextgen` позволяет **читать и изменять объекты внутри чужой JVM из соседнего процесса** —
 без JNI, без агентов, без `sun.misc.Unsafe` и без модификации целевого процесса.
 
 Вся «магия» построена на двух китах:
@@ -32,7 +32,7 @@
 ```
    ┌─────────────────┐        ReadProcessMemory          ┌─────────────────┐
    │   ВАШ процесс   │ ───────────────────────────────►  │  ЧУЖАЯ JVM      │
-   │  (JavaExternal) │ ◄───────────────────────────────  │  (Minecraft и   │
+   │ (JirNI-nextgen) │ ◄───────────────────────────────  │  (Minecraft и   │
    └────────┬────────┘        WriteProcessMemory         │   что угодно)   │
             │                                            └─────────────────┘
             ▼
@@ -220,5 +220,4 @@ long addr = Scanner.find(jvmBase, "48 8B 05 ?? ?? ?? ?? 48 85 C0 74");
 
 ## 👤 Автор
 
-**[dino939](https://github.com/dino939)** — автор оригинальной C++ библиотеки `JavaExternal`
-и её Java-порта **[`JavaExternalAccess`](https://github.com/dino939/JavaExternalAccess)**.
+**`JirNI-nextgen`** — авторская библиотека.
