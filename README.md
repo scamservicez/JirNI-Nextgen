@@ -8,9 +8,6 @@
 > Полная переноска C++ библиотеки **`JavaExternal`** на Java 22+ с использованием
 > Foreign Function & Memory API. Цель — **побайтовая совместимость поведения с оригиналом**.
 
-**Репозиторий:** <https://github.com/dino939/JavaExternalAccess>
-**Автор:** [**dino939**](https://github.com/dino939)
-
 ---
 
 ## ✨ Что это такое
